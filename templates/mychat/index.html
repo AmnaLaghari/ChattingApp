@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row align-center mt-5">
+        <div class="mobile col bg-white p-5">
+            <div class="row justify-content-between">
+                <div class="col-4">
+                    <div class="logo"><a>ChatMe</a></div>
+                </div>
+                <div class="col-4 text-end">
+                    <img src="static/{{user.pic.url}}" alt="profile" class="rounded-circle profile_img">
+                    <h5 class="me-4">{{request.user.username}}</h5>
+                </div>
+            </div>
+            <h1 class="text-center my-3">
+                Messages
+            </h1>
+            {% for friend in friends %}
+            <div class="row mx-5 my-2 justify-content-center border shadow rounded">
+                <div class="m-2 col-2">
+                    <img src="static/{{friend.profile.pic.url}}" alt="profile" class="border border-dark-subtle rounded-circle friend_img">
+                </div>
+                <div class="col-6">
+                    <h5 class="text-center"><a href="{% url 'detail' friend.profile.id %}">{{friend.profile.name}}</a></h5>
+                    <p class="text-center">dummy message dummy message</p>
+                </div>
+                <div class="col-2 m-2 text-center bg count rounded-circle">
+                    <div class="p-2 fw-bold fs-5">0</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

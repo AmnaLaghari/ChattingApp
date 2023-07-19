@@ -1,0 +1,42 @@
+.bg {
+    background-color: rgb(166, 101, 226);
+}
+
+.mobile {
+    margin-left: 250px;
+    margin-right: 250px;
+    border-radius: 20px;
+    height: 900px;
+    position: relative;
+}
+
+.logo {
+    color: rgb(166, 101, 226);
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.count {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-submit {
+    background-color:blueviolet;
+    color: white;
+}
+
+.messages {
+    position: absolute;
+    top: 750px;
+}
+
+.profile_img {
+    width: 100px;
+    height: 100px;
+}
+
+.friend_img {
+    width: 50px;
+    height: 50px;
+}
